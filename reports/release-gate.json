@@ -1,0 +1,77 @@
+{
+  "profile": "WSP-1",
+  "contract_version": 1,
+  "result": "WSP-1 NON-CONFORMANT",
+  "scope": "black-box contract; full release requires additional qualification evidence",
+  "groups": {
+    "Protocol": {
+      "passed": 49,
+      "failed": 0
+    },
+    "Address": {
+      "passed": 38,
+      "failed": 0
+    },
+    "Labels": {
+      "passed": 8,
+      "failed": 0
+    },
+    "Scanner": {
+      "passed": 5,
+      "failed": 0
+    },
+    "Reorg": {
+      "passed": 16,
+      "failed": 0
+    },
+    "Recovery": {
+      "passed": 1,
+      "failed": 0
+    },
+    "PSBT": {
+      "passed": 2,
+      "failed": 0
+    },
+    "Wallet": {
+      "passed": 5,
+      "failed": 0
+    },
+    "Privacy": {
+      "passed": 1,
+      "failed": 0
+    },
+    "Integration": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "failures": [],
+  "passed": 126,
+  "failed": 0,
+  "qualification": {
+    "result": "FAIL",
+    "engineering": "PASS",
+    "checks": {
+      "source_bound": true,
+      "format": true,
+      "lint": true,
+      "unit": true,
+      "conformance": true,
+      "differential": true,
+      "fuzz": true,
+      "real_node": true,
+      "interop": true,
+      "regtest": true,
+      "benchmark": true,
+      "dependencies": true,
+      "build": true,
+      "wam_profile_adoption": false,
+      "independent_security_review": false
+    },
+    "external_audit_status": "pending",
+    "blockers": [
+      "wam_profile_adoption",
+      "independent_security_review"
+    ]
+  }
+}

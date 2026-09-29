@@ -1,0 +1,806 @@
+[
+  {
+    "file": ".github/workflows/conformance.yml",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "68bbb5dc79660623655dfa4623dfb5e0ab428b76f37b0912b81182f8fcb72c9e"
+  },
+  {
+    "file": "ARCHITECTURE.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "578833cdc28029e8be4258788896d31e85c99c6d168b1a858fc6d1b3db87019d"
+  },
+  {
+    "file": "CHANGELOG.md",
+    "change": "modified",
+    "old_sha256": "2049103b072a21c14b53b25435f3eca09532119ec708d0156aec4598c3e71a29",
+    "new_sha256": "51b0d8e1fb204f362eafd7727bad81ecb09502a4c6a077a7bce1bd495b536e9b"
+  },
+  {
+    "file": "COMPATIBILITY.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "925b277a52c90401ad4ee7af2c251f3938295fe67a688f4bcc4e3fbb55427b85"
+  },
+  {
+    "file": "CONTRIBUTING.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "5a33a8bf357249a3008e31d60c9e6e5d14bef5d1fd69e908afbb58f73c137f92"
+  },
+  {
+    "file": "FINAL_REPORT.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "ac11ffc8f87df56fe71b3b91082fa3d4248e8b486205a59d4c9d431f0308efa2"
+  },
+  {
+    "file": "MANIFEST.in",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "202f34f54d631f2c6862cd0aa1e4e44c0ad05c2486edc4c133a10f69f940f018"
+  },
+  {
+    "file": "MIGRATION.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "7bedb1d59b252c6e93aa9ccd80b985401f2c08b78bd215d18d9138d70bd9c2a3"
+  },
+  {
+    "file": "PSBT.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "abf5b92717fd00e333c3d0b8ab547d048fa4e8f2b018434aab8ac216d4c2f82a"
+  },
+  {
+    "file": "README.md",
+    "change": "modified",
+    "old_sha256": "a3031234c114169416b396eb8d33fc9c46e7fdaa59747a097ef340e037329f4c",
+    "new_sha256": "b895e0f586ae790ef151ff60f2c35f205d05614600ee2cdde41791d810bea2ed"
+  },
+  {
+    "file": "RECOVERY.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "d361abce7d1bb51e163989aeb51a6f651127fe4acc4e862961231e85d61cd678"
+  },
+  {
+    "file": "SCANNER.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "4c5d6da76efe41643e0ecc5156862658cd95a09478ba9b328ace9a004c87cc93"
+  },
+  {
+    "file": "SECURITY.md",
+    "change": "modified",
+    "old_sha256": "d89cafc6b59fa72d9d6db4c549f74373f657334a4632cef8232bc92a58b51069",
+    "new_sha256": "1c467dd9466d88fba6f0a648b1541ded018df8f48ebdf90956eb277bd7e2dd65"
+  },
+  {
+    "file": "SPEC.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "3f43abd9c10a35dd1df05238313b514b9d2319e4bcb555bff04b323e22cbb9de"
+  },
+  {
+    "file": "THIRD_PARTY.md",
+    "change": "modified",
+    "old_sha256": "30d7e5de007cf4ded9058ccae648f0342614ab497310bfb9690c3f1de5db53f0",
+    "new_sha256": "6d6e695f61a3ff9a1a7ea4ef99e23af0f18e6d260f598bebc9b3208f98313d4f"
+  },
+  {
+    "file": "THREAT_MODEL.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "412d93f0700683f91bdeeffa4d9352ed29e75c917212d71fd76a5137af2ce6d1"
+  },
+  {
+    "file": "WSP-1.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "81b3e3684d3477ba65395ead58e2a6b8aad905397c196a998ef1c212242e03ee"
+  },
+  {
+    "file": "audit/CRYPTO_PRIMITIVES.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "788dcec8c4ef9fb68f673f812d49befd757c6b9221a5235384e869f57eb5881a"
+  },
+  {
+    "file": "audit/FINDINGS.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "a5ee063abba6194fe0a38f7234c3cac8e2b926e9de1fa94641a30a506ba1108c"
+  },
+  {
+    "file": "audit/INVARIANTS.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "e18c278403f44ea08ce1bf64e333b265ceb166adc76b577dfde8966b8fdc478d"
+  },
+  {
+    "file": "audit/README.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "6174bbf97f39bc3c9858109ba23fd6fdce486076e8c9c59e3c176319be7de7f7"
+  },
+  {
+    "file": "audit/REVIEW_CHECKLIST.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "d72e85e106fe3643951fced4c278bfdf7044a6048e10974216eae253f6a9efeb"
+  },
+  {
+    "file": "audit/TEST_EVIDENCE.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "f179f1ead7bb87e8b628c02550598a384db38fe5b9ec6dae633a24e552e590df"
+  },
+  {
+    "file": "audit/baseline-inventory.json",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "1b1bf4f2545fc1877e8bd72496c18bc59493216c574adc9b6bff8fa521cf3ec3"
+  },
+  {
+    "file": "audit/dependencies.json",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "f733657b0d2e9841b76e04701f071411c402e90965dce26b2188c0945df4aa25"
+  },
+  {
+    "file": "audit/release-decisions.json",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "0ee20e29ef9b127431fa2e1d5e394e983da9814ba58e034fff7ad2e39bef8963"
+  },
+  {
+    "file": "audit/upstream/bip-0352.mediawiki",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "a64d3b9ecc004ea4ae4c168e4631571f16e35eaa66595599729c6c066de4cff4"
+  },
+  {
+    "file": "audit/upstream/bip-0370.mediawiki",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "b2b6e9099592fa04179383f9a1fd8b201fbeef4470f4c3f1c050d25589979c57"
+  },
+  {
+    "file": "audit/upstream/bip-0374.mediawiki",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "359cb40c0fdea212045cbe017f88b80ead9d427e3c8b70f1a79e4a11c913b7cd"
+  },
+  {
+    "file": "audit/upstream/bip-0375.mediawiki",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "cfc700b4f0e107b7d7fb64addf39f128877ec9319f14071d0a882d719d75c84e"
+  },
+  {
+    "file": "audit/upstream/bip-0376.mediawiki",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "5b727db85ab0e882b443b7ec81706021cfacfc7675241ed877eba0b528e0cbe1"
+  },
+  {
+    "file": "audit/upstream/bip-0392.mediawiki",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "5be97bb2ebca7a047923a111854fbefea65262107d19afccd218291d00401493"
+  },
+  {
+    "file": "audit/upstream/bip-0393.mediawiki",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "b3bf6af51c9c9e430fe095ed28e3302bc9039556f9033b7e0818ed348a0425be"
+  },
+  {
+    "file": "benchmarks/scanner.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "b0810b434830b9fe696071ea3dbd49dc68d4f3350e9506b078f9ae4c09dd4fd2"
+  },
+  {
+    "file": "devtools/benchmark.py",
+    "change": "modified",
+    "old_sha256": "484a6589de900ffd903b833f8ae8a131ffd9e4907ffc46f1828bc1438a0e78f5",
+    "new_sha256": "3c9d7589ccf4baee6c774d843b22a50d352fd2cf93b0c4caccc66cc66a7af937"
+  },
+  {
+    "file": "devtools/build_check.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "1eafb71a623c41ee76fbeedbe1864b827f9983829b2377e36acc3beee9503b3a"
+  },
+  {
+    "file": "devtools/conformance.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "0d2d4c88d31ad75de8e6578d5ccd1e58bde2302424d35c04f66878927bcc9f1a"
+  },
+  {
+    "file": "devtools/conformance_adapter.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "2a3dc5c9cb080e3604c0647f2977d397b915d3077a2116c98934e0be6e835da2"
+  },
+  {
+    "file": "devtools/dependencies.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "176b62b31bf62f6c86b34813c1e9f72c4081f8e4ea9f0015f25421af6f7c8ea8"
+  },
+  {
+    "file": "devtools/differential.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "a0c5776c31a40efa4c0b4dd541d2e107bae29e9f8ef756c95ff85ee6f28e435f"
+  },
+  {
+    "file": "devtools/errors.py",
+    "change": "modified",
+    "old_sha256": "713df0b5430dcb91a9a64f5352560aaad6f7242ae322b8e86a064752781ea8f0",
+    "new_sha256": "4970613f4d2adea85891ce991874f6a26a41a93874e272d652bb9ed755b0870a"
+  },
+  {
+    "file": "devtools/interop.py",
+    "change": "modified",
+    "old_sha256": "8a795b87f31b77cb930a5df158b30a760392abf71a5493a839e369022f058e53",
+    "new_sha256": "57721ff9d42b70eaa575116cdbedb89a51d74f0672ff5544c14a24fe287bfe0f"
+  },
+  {
+    "file": "devtools/node.py",
+    "change": "modified",
+    "old_sha256": "d14f24bdc79bb7961b7faa3bae2a6304048a466e686cecae493733a6eada070d",
+    "new_sha256": "45965ff36fdc950a91a362061fc0847636d8eaf1e8ea92ec54fcc045811864be"
+  },
+  {
+    "file": "devtools/offline_process.py",
+    "change": "modified",
+    "old_sha256": "ba005af3c49df56f1207455e3ffb85b8d72a83103b9e2ff5c46543829de970a9",
+    "new_sha256": "fa3746603853042268c7d2136c38b67abef9e51b6ddb06c5552caabda532b090"
+  },
+  {
+    "file": "devtools/privacy.py",
+    "change": "modified",
+    "old_sha256": "8cc6645d412c6feb7d9c4dca3b76559d45330730db11d55a3ff22ad9c002dabc",
+    "new_sha256": "88e2638afba78f88e2e459db5d87004872d6129d0b078b66e98f6059cf358647"
+  },
+  {
+    "file": "devtools/qualification.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "ecf460fed4a3cd76b039dd29597d419bc5191a3253a162333b4ae51a6bc5b49c"
+  },
+  {
+    "file": "devtools/real_node.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "fee7f20bb0a40df3f65cf27299b663b90b3c1aa94f793009434292c1cc470afb"
+  },
+  {
+    "file": "devtools/regtest.py",
+    "change": "modified",
+    "old_sha256": "2b16f39e17477b2d7e95d76f316ed8d2089ecc0272bc1244351353d6bd28dfbe",
+    "new_sha256": "4a6a5a8a2c2d0474807a6e31ee45a65b3ad0a4e1321f01a62aae091c5f1ef74a"
+  },
+  {
+    "file": "devtools/rpc.py",
+    "change": "modified",
+    "old_sha256": "1073b1c9dd2b7e9e33ecca53ebb704e18c4272835b8421dddb664c9cab3ce8b5",
+    "new_sha256": "5b96b0d8daa0c8339a48178189b8211ac7a4addd2555d1fe24420eca439a5a1b"
+  },
+  {
+    "file": "devtools/selftest.py",
+    "change": "modified",
+    "old_sha256": "272ea1c4b5a0473821156f1a46a0380a3db81e5985ed619700f543df31c0f980",
+    "new_sha256": "b63f30a14b38d8d1fd2cded4e8cdd685cdb165541e42c4e3fa41955a70f285cf"
+  },
+  {
+    "file": "docs/ARCHITECTURE.md",
+    "change": "modified",
+    "old_sha256": "b8cfe3948457abcf3a361cedfb6c2a5576783e7c26dc9a68ff85158672ab04bd",
+    "new_sha256": "2dda82748f0570ab415d2cbb5718d5242cad6e08f6d1be35bc91c0fe227e960d"
+  },
+  {
+    "file": "docs/CONFORMANCE.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "15e9a0314aba1bf1636e6204a1ef5603758352159cff7c128b676dbb95845c58"
+  },
+  {
+    "file": "docs/EXTERNAL_REVIEW.md",
+    "change": "modified",
+    "old_sha256": "3563b515569b49da3b09a85d0e40cba453d153a4acbc05031408b8e49fffcc68",
+    "new_sha256": "fe1ec649b94e421f990597eb8ac4602f9e2f990845e82315d3dd275707e32e4b"
+  },
+  {
+    "file": "docs/INTEGRATION.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "b2e12ebcf21cd46c2d953c1e11278fe26a6605bf60726dd2ecbf3868e5290986"
+  },
+  {
+    "file": "docs/KEY_LIFECYCLE.md",
+    "change": "modified",
+    "old_sha256": "dc02eddbce29a76af188a8a3d211d0e4e020e1359bde8b400d66b183340332a4",
+    "new_sha256": "9b678bb1d092f23b9e2e6331abe615ebad44fa102f7b069ce7ae6c1d7e6bfc8c"
+  },
+  {
+    "file": "docs/TESTS.md",
+    "change": "modified",
+    "old_sha256": "ea8bc18c1a1a0acad1317726f5a7520075a431ac28f3be20c47254933158ca98",
+    "new_sha256": "80e3c363da2273600d5dfca1375770ff0aa2da395219fd7c373f63d8e996f54a"
+  },
+  {
+    "file": "docs/THREAT_MODEL.md",
+    "change": "modified",
+    "old_sha256": "e22de0d1fea677a487bb1fdb8fd6016c929de82c27bf7593b605da80445224a8",
+    "new_sha256": "412d93f0700683f91bdeeffa4d9352ed29e75c917212d71fd76a5137af2ce6d1"
+  },
+  {
+    "file": "docs/TIMING_REVIEW.md",
+    "change": "modified",
+    "old_sha256": "ef668331b8896247146a5616c80cd0c25d748aa8ce2cc938ee088a0ae94d6998",
+    "new_sha256": "8bfc3cac509efa561219a4a0414d9c96625885f133d90b489d9a83c4437c0727"
+  },
+  {
+    "file": "docs/VERIFICATION.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "f2c6c11c05091fc3eec8eb2d875e17fd954b4bc929124dce965a1cab08e21613"
+  },
+  {
+    "file": "docs/WIP-silent-payments.md",
+    "change": "modified",
+    "old_sha256": "9140f127301b7e846b591270cc1597766c7c9e8c8c6cb948f375b03a1f33ff0a",
+    "new_sha256": "3da30423f0bddf70689085cd960173b7bb526828b4c6af32afee5deffc53ad02"
+  },
+  {
+    "file": "examples/derive.py",
+    "change": "modified",
+    "old_sha256": "2b9a9c8fc7ec6c545262221a354f472c093bdcdd34c08c3c4c27c2eeee1b18bd",
+    "new_sha256": "55946fce199adb77c7ab6a379a09210c8bb4de9f5a46fe9a4fdacac2ae34b44f"
+  },
+  {
+    "file": "examples/keys.py",
+    "change": "modified",
+    "old_sha256": "13652996a0ef448f71c63ad5c29a577a77cff17baaf562bba787a73fc4c599e8",
+    "new_sha256": "539011c4a153afb8abb020065d04767a102fff45ae4910548abf97f24bc72fe6"
+  },
+  {
+    "file": "examples/wallet_api.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "724ff3872299e9a7af4dbe8ce79a138df87bf4a972b88d3ab2f26129de66e020"
+  },
+  {
+    "file": "fuzz/regressions/crash-d4c16780c7bfaddbc31652cd12afa5c3498de7a1",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "2e84244834d281b7ef0e785ecf6e837c7796cb7998981cc2412f980ff5319711"
+  },
+  {
+    "file": "fuzz/run.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "bc8abf87b2a40aeb1d7136b2fe22d9309e6d86110f3087e88b39907e41d439e8"
+  },
+  {
+    "file": "fuzz/seeds.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "97f07be8dd78280eb65650910a04505f502bed635154a4578251b310b447d3c5"
+  },
+  {
+    "file": "fuzz/targets.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "04f123584cc29b296ae2fbdf0cba3e3c5fe64742c479a8115fd7d97075fdaea2"
+  },
+  {
+    "file": "integration-deps/wam-sdk/LICENSE",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "9ae281dbdfd644ec3105876223226290fb58809925d360b1695c7ef8ba666882"
+  },
+  {
+    "file": "integration-deps/wam-sdk/README.md",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "9da97962f18c5f5d65adaacdc28f7917aea6ffe52ee72368f1ac9ef5a7d1b420"
+  },
+  {
+    "file": "integration-deps/wam-sdk/pyproject.toml",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "e3e6b68aaa26a116855defcd631f6feee115a7908135d9999773658d7f342940"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/__init__.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "3b3bb264fc96fcf23aacd6265bd96097b5c9c715b8f14fded1a6c94811922d1e"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/amount.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "89921eedcd14322933d4d8186ce43737bc28d3036459d6dc79c9f3010f0825af"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/client.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "72c729e5dcbcc846cbea52e88ba75e125b50c9b54149119fdce876ba881ab915"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/config.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "7b2f0dc951010fa9f93130e3396417db20576add57cebfdbee281abde9f272e2"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/errors.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "58e842816acfb9c784240fe6548a044594204fe1853910451c8de43209979fb1"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/models.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "1208a7e92acc9e185b6358a3ce337111cf860d64be310683da01205352078144"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/payments.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "e2e839af921833030d2d6e4b55ecf76b9e45ca5cdeda084d58cd60ae52b251a6"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/privacy.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "3a54ab2b4435f30d3c46f3aea34d9567964b71c40f7876e20b4c451be1792d24"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/py.typed",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "integration-deps/wam-sdk/src/wam_sdk/transport.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "ea5e8983879afabef0b52435104edfbe49e901f35f295b887f8931b54bd12809"
+  },
+  {
+    "file": "pyproject.toml",
+    "change": "modified",
+    "old_sha256": "7167a78571bac85f5b97b8318728f1fe50aa8aeb1e711fdaed323ef1976514cd",
+    "new_sha256": "88f43e94a0d6e1f9ff8f7d552282ccd395712dc86ffc193da66b60cd2c206583"
+  },
+  {
+    "file": "requirements-dev.txt",
+    "change": "modified",
+    "old_sha256": "82b92de42e1327818aa4ae9f7ab353f3aa6c8d852ec7631f8d98ca13bcae437d",
+    "new_sha256": "58104fa85496e6774028d910f6aad10b2719416969e7d079f0ae0b340859ac3c"
+  },
+  {
+    "file": "requirements-lock.txt",
+    "change": "modified",
+    "old_sha256": "57b4ac78c297add88581d61e36b522466c7065fda2c6f769027c78c37575a838",
+    "new_sha256": "e3bf402253d59a3baca1b452261068c56e9226ee84623f998b5cf54148c581c8"
+  },
+  {
+    "file": "scripts/qualify.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "3876ad35fca6aea859ff0b171292e904541d305f2d471b608a37a7b5102cc287"
+  },
+  {
+    "file": "scripts/run-real-node-tests.sh",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "fe453dc4260a50d8bd01b79a275758492d5fe9b7a574302a121957e883a55905"
+  },
+  {
+    "file": "src/wam_sp/__init__.py",
+    "change": "modified",
+    "old_sha256": "30c11848f96318b0302009c361b81e0f94e8eafb7b6240a7b027ca0f06419c02",
+    "new_sha256": "27ad88ce7ff767e4cad6feef198638dd85bd95bcd10ea2b36c3c642508b2337d"
+  },
+  {
+    "file": "src/wam_sp/adapters/__init__.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "836cd9d24e502e73c2e68e24f444a33286aa0490eb78d1d3b1f8594f938c4c36"
+  },
+  {
+    "file": "src/wam_sp/adapters/descriptor.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "64ed19c0eb8d350ac857d6e8bf607c0da4a25e056a1a110eae50c627ac2fc3cd"
+  },
+  {
+    "file": "src/wam_sp/adapters/dleq.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "c7b1875f1bce03b046914e949dfa58797d8f8f1e963fa428eccbe303b09be7c6"
+  },
+  {
+    "file": "src/wam_sp/adapters/pay.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "aa5a0748f5bf459e02a6898a3448b7ffc0f08cc50cfbf1e098f20fb2aa0065ed"
+  },
+  {
+    "file": "src/wam_sp/adapters/psbt_document.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "5991865c6d95768ef545fb79c42e64738c71c4ef8f2562d4fc114b08a73db271"
+  },
+  {
+    "file": "src/wam_sp/adapters/sdk.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "a404e18c2c4f395012cb750649f8a944c3774bd67f0b3abd0e6e8937c8fb36e1"
+  },
+  {
+    "file": "src/wam_sp/adapters/sp_psbt.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "d214413e8b89b526a0037a8cffe92984441526a3da2cb6515ea416b3c34b2d06"
+  },
+  {
+    "file": "src/wam_sp/adapters/watchtower.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "76afcb02a57e612acd44dbfdaf51325a6bf7160557408fab29f66d110b104dc2"
+  },
+  {
+    "file": "src/wam_sp/api.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "9feec2f5e72d705bf793a233470cd1cbdf12abc12e688e85747fdd008f2999c5"
+  },
+  {
+    "file": "src/wam_sp/backup.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "590757229da1a386331e27a62a647368eb980e6757d64558250f972bb11fdabb"
+  },
+  {
+    "file": "src/wam_sp/chain.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "805e9af335b76c37e9467c7418eeb07a32077bfb9bab9a06c9e62b49f1b74dc5"
+  },
+  {
+    "file": "src/wam_sp/codec.py",
+    "change": "modified",
+    "old_sha256": "fc1d3f2305bec3b29cbb883a6cbb7c8947bffca39537b93a380fd64cbde0dd44",
+    "new_sha256": "55ae210fc26bdfe99dacb799927f29a86b550a6e2f81c597c0efdf0d5946011c"
+  },
+  {
+    "file": "src/wam_sp/conformance.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "b1fe6b592ede89fd47ce3870b8c17e0f7be0fbeaa5ba0f29a2788145a946c216"
+  },
+  {
+    "file": "src/wam_sp/core.py",
+    "change": "modified",
+    "old_sha256": "e105e28d2a1e50dedbc07ceb0210ef24a9d4c7908d24cf53b12470587f38aeee",
+    "new_sha256": "a600e2031bc20fff1f9f0c06e457917ec34dec33d8a492c4dade35d2366eb786"
+  },
+  {
+    "file": "src/wam_sp/crypto.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "c9968d899a0844b4215389efe72799501fd0093cf355899c6d3338386ed1242c"
+  },
+  {
+    "file": "src/wam_sp/descriptors.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "aa89e55cc95b70f0a5f60a6e2d4736323d1e4a9d260ac64112e61a63f9ae7c02"
+  },
+  {
+    "file": "src/wam_sp/errors.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "3f968d0a9093aa80fb646cf4fed52cab661fc0f3af68b0a54af81133fee3cb22"
+  },
+  {
+    "file": "src/wam_sp/hd.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "15804196ec5a75751b2202df02547d1eedb28286597b86416bae25cfd83a49b8"
+  },
+  {
+    "file": "src/wam_sp/keystore.py",
+    "change": "modified",
+    "old_sha256": "fc072515e1fd68ccfff21131bd77004b112167fa268ac1a686796ed5d568333f",
+    "new_sha256": "3b0cd170f1c427597c4793a6f153d7912412939a68e3f402aac909a4ac7e1364"
+  },
+  {
+    "file": "src/wam_sp/limits.py",
+    "change": "modified",
+    "old_sha256": "cfd9c4d7b8cfb975e2a29325e547aedcc19988140e7795bcd84cfb0b75f6cb88",
+    "new_sha256": "a920e1e4ed6a54d86a420dfd8c5de27d20998a90c0276649063acc0d17229f6f"
+  },
+  {
+    "file": "src/wam_sp/offline_signer.py",
+    "change": "modified",
+    "old_sha256": "2bfa851a18d737597adf01498ad3b328c544fd1a6d0150500d1843ef82e92171",
+    "new_sha256": "5fcb76f8383bb784567df3abf62f46f295c011f00bae0add8ad2e00661db8019"
+  },
+  {
+    "file": "src/wam_sp/privacy.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "148808ab7136c1eede133ffa7783b77fe3cf72b39ae5c44f2ef0b40f1516bc57"
+  },
+  {
+    "file": "src/wam_sp/profile.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "e9ac44fe047ad38c5fdd776eaf643779f5222ec653c3800a5e2455f1c1c71f40"
+  },
+  {
+    "file": "src/wam_sp/psbt.py",
+    "change": "modified",
+    "old_sha256": "c0614f6345bc6781cbb1aa49f631c4b78c617d93ced1371b13977537ec606505",
+    "new_sha256": "4253a8e16fc166798b0f4f88e105496a7132838e340fc8228e5bd28a25cf3a9b"
+  },
+  {
+    "file": "src/wam_sp/rpc.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "c20b934add8d77e79d5e0c5f56b1c33954c9da933ba572119c740d1846a82a10"
+  },
+  {
+    "file": "src/wam_sp/scanner.py",
+    "change": "modified",
+    "old_sha256": "1071826e0f34b018288394e9a6cc059cffda371115214ee44d30665d371c7967",
+    "new_sha256": "b607e948104bfeea4550d41cf8ca594917bb6ca17b80592ab5c6b4a0357410a4"
+  },
+  {
+    "file": "src/wam_sp/state.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "a24035bccdbf85bafed58caaa65f6eeea5919f149c06286bbcd0bac7b2906f3a"
+  },
+  {
+    "file": "src/wam_sp/store.py",
+    "change": "modified",
+    "old_sha256": "173e71fc522592f3f102861429df30a591b9c8802b97292cf5bf2eb7537b1fc5",
+    "new_sha256": "b5071cdbff8e7d0b4f75aa730b56e43e140558f370c0cdd81e86fe0cd8ac306c"
+  },
+  {
+    "file": "src/wam_sp/transaction.py",
+    "change": "modified",
+    "old_sha256": "0ed4fabf1af2d852a5a3a33b646afbe5095897375159f4bdb2a0514347b1b645",
+    "new_sha256": "bbbb8efab0d630bb07d53dc710c5de27ddcd7d846dddee40375e238f2204d6b4"
+  },
+  {
+    "file": "src/wam_sp/wallet.py",
+    "change": "modified",
+    "old_sha256": "455de563d918345b5494e2b70cc1a3386c160adc656954e72d03be25caf5a7cc",
+    "new_sha256": "6a848920ca3404921bc198a1c50754b383224bc408d6aa4690d4237b4ed09e00"
+  },
+  {
+    "file": "src/wam_sp/watcher.py",
+    "change": "modified",
+    "old_sha256": "ed3a777df3bed09a0cd149cb14cdb051758e06f48ee09fc98b1023ca41d1be5e",
+    "new_sha256": "4ff1ad1ef20b8d3f0b148e414a8e066d37223807d93f94d42d3fa1c0c0a66dd3"
+  },
+  {
+    "file": "tests/conformance/cases.json",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "f241502bafb145c621228146d921c1a78baf80a74d09cdafe98bfc23b7c722e1"
+  },
+  {
+    "file": "tests/test_adversarial.py",
+    "change": "modified",
+    "old_sha256": "a2b229937b28ee75474570444e832a140abcfaa4d9d43d151a6824f121b67eca",
+    "new_sha256": "034189a4cc3810f23d97b2126b6dc62427a572eab522a105ee8a7de6bdb550a9"
+  },
+  {
+    "file": "tests/test_bip375.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "9d518242bc9c334a4948133b5b5f40c79cfa0fecfe5f05a139ca5deba2900bab"
+  },
+  {
+    "file": "tests/test_boundaries.py",
+    "change": "modified",
+    "old_sha256": "20de13e8f3c6ee61c35337c673951bbefc1e1e195021358647c65b42e41e95ba",
+    "new_sha256": "70350571cd869073647e2a3f88f911ffbd11961a64523563c90163d1ba77e059"
+  },
+  {
+    "file": "tests/test_differential.py",
+    "change": "modified",
+    "old_sha256": "21cbc0f310b644380b820d8809e8d2801788362c2e2feac7b4cb127ba88491de",
+    "new_sha256": "3f0a49363205892505c97387c0c40312a5011e9de1ee3578584d68799cbc90bd"
+  },
+  {
+    "file": "tests/test_durability.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "cfb878eca0aa0651eb12d439598de9d1121ae1e08c34946dd92d9636f20b72c7"
+  },
+  {
+    "file": "tests/test_integrations_v1.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "af1ba1d29871c0f93e6c61e0d5262870b3a7d4b522e8a4eb1454f6620d394791"
+  },
+  {
+    "file": "tests/test_keys_psbt.py",
+    "change": "modified",
+    "old_sha256": "4dd9f26801cfeace3161653da8e3f46dd782ef4559f2775fc88bf8fbb449c59f",
+    "new_sha256": "db0061cd3fe9f4f97fa1a5de1553a97dd90721eeb791bf019510aae9ee87fe4c"
+  },
+  {
+    "file": "tests/test_psbt_v2.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "b033b0e8cd232df1aa7e195d7a468a9ee58287f27a36b2715f56614843e338df"
+  },
+  {
+    "file": "tests/test_recovery_v1.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "71c04689ec3fa4f7969c6e8e04f9eb492b20846f5c978b3fa74fb2f30d14b1e3"
+  },
+  {
+    "file": "tests/test_release_gate.py",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "d623a88cea7d5f20bc7c7fb30e78242393e11915c2d799368af8b230eeaf6126"
+  },
+  {
+    "file": "tests/test_scanner_wallet.py",
+    "change": "modified",
+    "old_sha256": "b21cfd87b2f35b5156ba3b9ff4b31741e0e09e6c6abd54cb4c54b6b8fb47047d",
+    "new_sha256": "73a72f5156ba9c6022dd517c04ac49233c6780036ff7a51974e1f70226c2a472"
+  },
+  {
+    "file": "tests/test_vectors.py",
+    "change": "modified",
+    "old_sha256": "b653078c348be893355e4ac91eed10ea8c0388e7989d8020e2b16419d70d9e84",
+    "new_sha256": "3a8563cd6f3654cd1d724f53631810bd9790e7cb0835ba6f33c92f657020a7f0"
+  },
+  {
+    "file": "tests/vectors/bip374-generate.csv",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "d5c23db2eca645f63502de45802bd9b5630ff2213bd9c5874dc23df5c275ce35"
+  },
+  {
+    "file": "tests/vectors/bip374-verify.csv",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "e3b10044308a4fe4947abc1cb0e49e02910c97a489a88f4b2dfdacd6f1a9a508"
+  },
+  {
+    "file": "tests/vectors/bip375.json",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "e516e1f4ac74a04f00f22f1d52dd9e83e12245169ae53e3b542a0db05b4bdfe1"
+  },
+  {
+    "file": "tests/vectors/wsp1-wallet.json",
+    "change": "added",
+    "old_sha256": null,
+    "new_sha256": "c640f33c7eda27c06fec3e0a57d869eb6cdd36f61bee3a6cdf94fe243f221022"
+  }
+]

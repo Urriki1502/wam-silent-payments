@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wam-silent-payments"
+version = "1.0.0.dev0"
+description = "WSP-1 Silent Payments implementation under release qualification"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["coincurve==21.0.0", "cryptography==50.0.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+wsp-conformance = "wam_sp.conformance:main"
+wam-sp-signer = "wam_sp.offline_signer:main"
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["tests/reference", "integration-deps", "build", "dist"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

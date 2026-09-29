@@ -1,0 +1,21 @@
+{
+  "suite": "wsp-real-node",
+  "passed": [
+    "WSP-E2E-001",
+    "WSP-E2E-002",
+    "WSP-E2E-003",
+    "WSP-E2E-004",
+    "WSP-E2E-005",
+    "WSP-E2E-006",
+    "WSP-E2E-007"
+  ],
+  "failed": [],
+  "real_reorg_depths": {
+    "1": 1,
+    "12": 12,
+    "100": 100,
+    "300": 300
+  },
+  "seconds": 105.772,
+  "core_version": "0.1.11"
+}
