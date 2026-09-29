@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+*.log
+.cookie
+wallets/
+regtest/
+backup.json
+watch.json
+recovery.json
