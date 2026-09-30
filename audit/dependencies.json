@@ -31,6 +31,17 @@
       ]
     },
     {
+      "name": "pycryptodome",
+      "version": "3.23.0",
+      "license": "BSD License / Public Domain",
+      "requires": [],
+      "project_urls": [
+        "Homepage, https://www.pycryptodome.org/",
+        "Source, https://github.com/Legrandin/pycryptodome",
+        "PyPI, https://pypi.org/project/pycryptodome/3.23.0/"
+      ]
+    },
+    {
       "name": "cffi",
       "version": "2.1.1",
       "license": "MIT-0",
@@ -57,6 +68,6 @@
     }
   ],
   "python": ">=3.11; verified CPython 3.12/Linux x86_64",
-  "crypto_backend": "coincurve bundled libsecp256k1; cryptography bundled OpenSSL",
+  "crypto_backend": "coincurve bundled libsecp256k1; cryptography bundled OpenSSL; PyCryptodome RIPEMD160 for HASH160 portability",
   "update_policy": "pin reviewed releases; pip-audit each qualification; rerun vectors, differential, fuzz, restore and real-node suites after crypto upgrades"
 }
