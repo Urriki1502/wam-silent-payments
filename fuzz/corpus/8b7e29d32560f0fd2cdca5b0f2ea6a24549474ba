@@ -1,0 +1,1 @@
+{"schema": 3, "identity": "synthetic", "tables": {"blocks": [], "coins": [], "caentity": "synthetic", "tables": {"blocks": [], "ccts": [], "reservations": [], "history": [], "meche": [], "contacts": [], "resions": [], "history": [], "mempool_coins": [], "mempool_spends": [],"intents": [], "outbox": []}}

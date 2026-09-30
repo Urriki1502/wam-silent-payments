@@ -1,0 +1,1 @@
+{"txid": "abababababababababababababababababababababababababababababababab", "vin": [{"txid": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd", "vout": 0, "prevout": {"scriptPubKey": {"hex": "0014ababababababababb"}}}], "vout": [{"n": 5, "value": "0.001", "scriptPubKey": {"hex": ":e5ef4246b895da008ab"}}]}

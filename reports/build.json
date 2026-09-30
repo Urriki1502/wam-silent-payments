@@ -1,0 +1,10 @@
+{
+  "suite": "clean-install-reproducible-build",
+  "result": "PASS",
+  "wheel": "wam_silent_payments-1.0.0.dev0-py3-none-any.whl",
+  "sha256": "2634fde76340ef050c8b22f32c4e08c4664de89d520214f990201d4c7a6d56a3",
+  "identical_wheels": 2,
+  "clean_install": true,
+  "migration_and_crash_tests": 7,
+  "recovery_tests": 6
+}

@@ -1,0 +1,1 @@
+{"schema": 3, "identity": "nthetic", "tables": {"blocks": [], "coins": [], "cache": [], "contacts": [], "reservations": [], "history": [], "mempool_cointity": "synthetic", "tables": {"blocks": [], "coins": [], "cache": [], "^ontacts": [], "reservations": [], "hissbels": [], "intents": [], "outbox": []}}

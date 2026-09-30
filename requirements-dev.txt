@@ -1,0 +1,9 @@
+-r requirements-lock.txt
+setuptools==84.0.0
+wheel==0.48.0
+packaging==26.3
+
+ruff==0.15.6
+atheris==3.0.0; sys_platform == "linux"
+pip-audit==2.9.0
+build==1.4.0

@@ -1,0 +1,38 @@
+{
+  "profile": "WSP-1",
+  "seed": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "scan_private": "2ce2a0c4c9657201e7ff65e2e36aa11ce9a7ce28f8573eb9c097786fe5c59ab9",
+  "spend_public": "02f5eeee27ebaa9cd80ae1653f0a563c44163c557043a087ddfe2986b2b1d97e98",
+  "address": "wamrtsp1qq2kcg56metldmeyqlrxu66qwhnevpdt2r9g7ywwrxcqq0umrz45n2qh4amhz06a2nnvq4ct98u99v0zyzc792uzr5zraml3fs6etrkt7nqexejtf",
+  "label7": "wamrtsp1qq2kcg56metldmeyqlrxu66qwhnevpdt2r9g7ywwrxcqq0umrz45n2q72kckkyw68xrygw0y0zyfwxerlh9arzzf45ek2q8vylmdk7tq9jsackrvx",
+  "payment": {
+    "txid": "00000000000000000000000000000000000000000000000000000000000003e9",
+    "vin": [
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000001",
+        "vout": 0,
+        "scriptSig": {
+          "hex": ""
+        },
+        "txinwitness": [
+          "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "03d30199d74fb5a22d47b6e054e2f378cedacffcb89904a61d75d0dbd407143e65"
+        ],
+        "prevout": {
+          "scriptPubKey": {
+            "hex": "0014fcd35ddacad9f2d5be5e464639441c6065e6955d"
+          }
+        }
+      }
+    ],
+    "vout": [
+      {
+        "n": 0,
+        "value": 0.001,
+        "scriptPubKey": {
+          "hex": "5120b994636774d2a2860dc306741a0abad180b14fb7bd1ebf288e00d1f843e211cc"
+        }
+      }
+    ]
+  }
+}

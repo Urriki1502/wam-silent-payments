@@ -1,0 +1,9 @@
+{
+  "suite": "independent-bip352-differential",
+  "seed": 35220260930,
+  "oracle_revision": "3a10b5b5f0a7586df8928d580a3009744ebb2079",
+  "target": 10000,
+  "passed": 10000,
+  "failed": 0,
+  "seconds": 157.087
+}

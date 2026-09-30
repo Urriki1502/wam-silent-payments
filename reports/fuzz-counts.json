@@ -1,0 +1,16 @@
+{
+  "engine": "atheris-3.0.0/libFuzzer",
+  "executions": 1009000,
+  "targets": {
+    "address": 100613,
+    "transaction": 119061,
+    "eligible_input": 43083,
+    "scanner": 65142,
+    "descriptor": 223095,
+    "psbt": 353880,
+    "backup": 54710,
+    "label": 15674,
+    "database_decoder": 33742
+  },
+  "seconds": 123.812
+}

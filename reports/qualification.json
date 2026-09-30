@@ -1,0 +1,99 @@
+{
+  "profile": "WSP-1",
+  "source_sha256": "b1a1d0fa234b240807a663c02a75db81ba04c182c08a726f680eb2cda7c1bec1",
+  "gates": {
+    "format": {
+      "exit_code": 0,
+      "seconds": 0.032,
+      "reports": {
+        "reports/qualification-format.log": "70aeb2781372748bf56bc4126fc132461937977430c7144a7cb865fa230b87a6"
+      }
+    },
+    "lint": {
+      "exit_code": 0,
+      "seconds": 0.032,
+      "reports": {
+        "reports/qualification-lint.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      }
+    },
+    "unit": {
+      "exit_code": 0,
+      "seconds": 12.449,
+      "reports": {
+        "reports/qualification-unit.log": "42b8f30eebf7cb7ec6110bb5d7577a0bb96eb4303461491482003bea7ccb2b35"
+      }
+    },
+    "conformance": {
+      "exit_code": 0,
+      "seconds": 1.619,
+      "reports": {
+        "reports/qualification-conformance.log": "a92e634dbe80d0f409d3510eb82bc12b719e2b0da9b625772e1a84944e3e2b79",
+        "reports/conformance.json": "1b98810bcd9d6f64d294415c40d9f0a5cf593c540141285f11a01040d701f340"
+      }
+    },
+    "differential": {
+      "exit_code": 0,
+      "seconds": 157.174,
+      "reports": {
+        "reports/qualification-differential.log": "07caf3f2107a836a8131a59591d257fa28e3aa663952de373c05f15bf7c031c4",
+        "reports/differential.json": "4a71e953748689eacbdb340ba32c8d820694dc3fb62407c3f57590516621e0c7"
+      }
+    },
+    "fuzz": {
+      "exit_code": 0,
+      "seconds": 124.92,
+      "reports": {
+        "reports/qualification-fuzz.log": "71382561e9367beaed6a6fbb081f8a73f553f9e33106b94197d8214168af24c9",
+        "reports/fuzz-counts.json": "5080e1ef9d52c217efd47d876d74e37c0ac63cf768645bb34d7572983627e02d"
+      }
+    },
+    "real_node": {
+      "exit_code": 0,
+      "seconds": 105.891,
+      "reports": {
+        "reports/qualification-real_node.log": "c1d80b166b52d1cbf1ee574a61f5574d496cfc1e61ef7f5349376013184ad875",
+        "reports/real-node.json": "87c9468dd9c43668b9399c0eb354713a4e8bc959336611c6b7c4ba599af230cb"
+      }
+    },
+    "interop": {
+      "exit_code": 0,
+      "seconds": 28.048,
+      "reports": {
+        "reports/qualification-interop.log": "05b30b06a3f163fa2b8a267d8cc90a75b6b464aba7e1432709b1f5ac682bdb83"
+      }
+    },
+    "regtest": {
+      "exit_code": 0,
+      "seconds": 10.996,
+      "reports": {
+        "reports/qualification-regtest.log": "8fed2bd16735413f73d3db5a8d9f25dd2dbeca0963c08eb2d8e4dcf584cf0b0b"
+      }
+    },
+    "benchmark": {
+      "exit_code": 0,
+      "seconds": 3.222,
+      "reports": {
+        "reports/qualification-benchmark.log": "f52879491ae5dc75ee1368d58983a8d6447609a521f9d3b50f70b44db237128e",
+        "reports/benchmark.json": "ca47c20eebe230dfc42d58e5ae6fc04300cb4dd7747e85977ce938be962c231f"
+      }
+    },
+    "dependencies": {
+      "exit_code": 0,
+      "seconds": 24.389,
+      "reports": {
+        "reports/qualification-dependencies.log": "15950a68a7ed99c59779717acefdceb3f69cfd31bde67d2c954f2a3cea4d7955",
+        "reports/dependency-audit.json": "cf59d02ec98350e6d09858d3646329919adb2417a5758f986794258eb795bcb9"
+      }
+    },
+    "build": {
+      "exit_code": 0,
+      "seconds": 19.697,
+      "reports": {
+        "reports/qualification-build.log": "813d577c83b721ca51b97698953958071bf6848c4aa32ad4dec3bd5e6ebcd13a",
+        "reports/build.json": "c7eba76c4e58c5174398ac3c35c3a14ad91ac2b326cffa2e7665e7c150f8dc30"
+      }
+    }
+  },
+  "started_unix": 1790698286,
+  "finished_unix": 1790699692
+}
