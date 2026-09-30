@@ -8,7 +8,7 @@ version = "1.0.0.dev0"
 description = "WSP-1 Silent Payments implementation under release qualification"
 requires-python = ">=3.11"
 license = "MIT"
-dependencies = ["coincurve==21.0.0", "cryptography==50.0.0"]
+dependencies = ["coincurve==21.0.0", "cryptography==50.0.0", "pycryptodome==3.23.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

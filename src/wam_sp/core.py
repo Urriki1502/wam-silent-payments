@@ -1,8 +1,9 @@
 """BIP352 v0 derivation using native secp256k1 points. Experimental key custody."""
 
 from dataclasses import dataclass
-from hashlib import sha256, new
+from hashlib import sha256
 from coincurve import PrivateKey, PublicKey
+from Crypto.Hash import RIPEMD160
 from .codec import encode, decode
 from .crypto import shared_point, secret_product
 from .limits import DEFAULT, check_inputs
@@ -31,7 +32,7 @@ def tagged(tag, data):
 
 
 def hash160(data):
-    return new("ripemd160", sha256(data).digest()).digest()
+    return RIPEMD160.new(sha256(data).digest()).digest()
 
 
 def pub(secret):
