@@ -11,6 +11,8 @@ Source: https://github.com/bitcoin/bips/tree/3a10b5b5f0a7586df8928d580a3009744eb
 * secp256k1lab: MIT; notice in tests/reference/secp256k1lab/COPYING.
 * coincurve 21.0.0: MIT OR Apache-2.0, native libsecp256k1 wrapper; external package.
 * cryptography 50.0.0: Apache-2.0 OR BSD-3-Clause, AES-GCM/scrypt; external package.
+* PyCryptodome 3.23.0: BSD License / Public Domain; RIPEMD160 implementation used
+  for deterministic HASH160 behavior across supported platforms; external package.
 * cffi 2.1.1: MIT-0. pycparser 3.0: BSD-3-Clause. Native libraries bundled in wheels
   have their own retained distribution notices; do not strip them when packaging.
 * WAM SDK 0.1.0: supplied source snapshot under integration-deps/wam-sdk, MIT notice
