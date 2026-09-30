@@ -21,6 +21,18 @@ def main():
         "skipped": len(result.skipped),
     }
     print(json.dumps(report, separators=(",", ":")))
+
+    # CI-safe diagnostics: print test identifiers only.
+    # Never expose exception messages, paths, keys, addresses or transaction data.
+    if not result.wasSuccessful():
+        failed_ids = sorted(
+            {test.id() for test, _ in [*result.failures, *result.errors]}
+        )
+        print(json.dumps(
+            {"failed_test_ids": failed_ids},
+            separators=(",", ":"),
+        ))
+
     return int(not result.wasSuccessful() or bool(result.skipped) or result.testsRun == 0)
 
 
