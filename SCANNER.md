@@ -41,3 +41,15 @@ A reorg beyond the configured undo limit returns REORG_LIMIT_RESCAN_REQUIRED.
 Stop applications from spending, retain the recovery bundle, invoke `scanner.rescan`,
 then sync from genesis. Birthdays suppress ownership work before each account's
 birthday while retaining verified block linkage. No balance is available mid-rescan.
+
+
+## Explicit node / scanner boundary
+
+The scanner consumes the structural `wam_sp.block_source.BlockSource` capability:
+`attest()` plus `call(method, params)`. Existing WAM SDK/Core adapters satisfy this
+without giving the scanner wallet or signing authority.
+
+A `ScanAccount` contains the scan secret and spend public key required by BIP-352
+receive scanning. The seed and spend private key remain in `Keyring` and are only
+used by the signing role. See `docs/SILENT_PAYMENTS_ARCHITECTURE.md` for the complete
+ownership model.
