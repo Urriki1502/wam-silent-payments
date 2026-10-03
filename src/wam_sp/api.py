@@ -2,6 +2,7 @@
 
 from dataclasses import replace
 from .profile import API_VERSION, PROFILE
+from .block_source import BlockSource
 from .scanner import Scanner
 from .wallet import Wallet, Intent
 from .descriptors import Descriptor
@@ -56,7 +57,7 @@ class SilentWallet:
     def descriptor(self, epoch=None):
         return Descriptor(self._account(epoch))
 
-    def scan(self, rpc, max_blocks=None, mempool=False):
+    def scan(self, rpc: BlockSource, max_blocks=None, mempool=False):
         metrics = self.scanner.sync(rpc, max_blocks=max_blocks)
         if mempool and self.scanner.ready:
             self.scanner.sync_mempool(rpc)
