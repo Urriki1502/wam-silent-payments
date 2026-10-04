@@ -37,6 +37,10 @@ transaction graph. **Network:** broadcast IP protection is not supplied by SP.
 **Endpoint:** no protocol compensates for an infected signer or stolen plaintext
 backup. Deploy and assess each boundary separately.
 
+The at-rest artifact contract and machine-checked plaintext exclusions are
+documented in [docs/PRIVACY_AT_REST.md](docs/PRIVACY_AT_REST.md). The live SQLite
+database is explicitly treated as sensitive metadata, not encrypted storage.
+
 The offline user sees intended destination/amount/fee for approval. Generated
 output mappings are not placed in operational logs. PSBT carries standard SP
 public derivation metadata and is therefore private transport, not safe telemetry.
