@@ -53,6 +53,19 @@ The scanner receives `ScanAccount` values. A scan account contains:
 
 It does not contain the wallet seed or spend private key.
 
+### Scan secret privacy boundary
+
+The scan secret is intentionally available to the scanner. Anyone who obtains it,
+together with the account's public data, can identify incoming payments to that
+account. This does **not** grant spending authority and does not reveal the spend
+private key, so compromise of the scan secret is a privacy loss rather than a loss
+of funds.
+
+Treat the scan secret and exported scan backups as privacy-sensitive secrets even
+though they are not spending keys. This is the intended BIP-352 trade-off: online
+scanning can be separated from offline spending authority, but the scanner still
+holds material that protects payment privacy.
+
 The scanner database stores chain/index data needed to recover matched outputs:
 block linkage, matched outpoints, amount, account/epoch, matched public key, tweak,
 label, receive/spend height, bounded public preparation cache, mempool snapshot,
@@ -122,10 +135,9 @@ Boundary tests verify that:
 
 1. a minimal local block-source capability can drive an empty-chain sync;
 2. `ScanAccount` exposes scan secret plus spend public key, not spend secret;
-3. scanner source has no spend-secret or signer dependency;
-4. coordinator wallet holds the scanner, not a keyring;
-5. signer remains the only component under this architecture that accepts the
-   seed-bearing `Keyring`.
+3. a non-empty Silent Payments scan and coordinator balance read complete while
+   `Keyring.spend_secret` is replaced with a throwing sentinel, so any direct or
+   indirect attempt to cross the spend-key boundary fails the test.
 
 Existing BIP-352 vectors, scanner tests, conformance, differential and fuzz gates
 remain authoritative for protocol behavior. This architecture change must not weaken
