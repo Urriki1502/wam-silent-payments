@@ -11,7 +11,7 @@ from wam_sp.adapters.pay import Merchant
 from wam_sp.api import SilentWallet
 from wam_sp.keystore import Keyring, seal, unseal
 from wam_sp.psbt import PSBT
-from wam_sp.wallet import Intent, Signer
+from wam_sp.wallet import Signer
 
 
 PASSWORD = b"recovery drill v2 synthetic password"
@@ -39,7 +39,7 @@ class RecoveryDrillV2(unittest.TestCase):
             wallet = SilentWallet(old / "wallet.db", ring.accounts())
             merchant = Merchant(wallet)
 
-            intent = merchant.create_intent(100_000, confirmations=1)
+            merchant.create_intent(100_000, confirmations=1)
             first_label = wallet.scanner.accounts[0].labels[-1]
             ring.add_label(0, first_label)
 
