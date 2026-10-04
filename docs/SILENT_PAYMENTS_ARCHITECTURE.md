@@ -135,9 +135,10 @@ Boundary tests verify that:
 
 1. a minimal local block-source capability can drive an empty-chain sync;
 2. `ScanAccount` exposes scan secret plus spend public key, not spend secret;
-3. a non-empty Silent Payments scan and coordinator balance read complete while
-   `Keyring.spend_secret` is replaced with a throwing sentinel, so any direct or
-   indirect attempt to cross the spend-key boundary fails the test.
+3. the complete scanner-side lifecycle — confirmed sync, mempool scan, reorg,
+   rescan, account/label reconfiguration and coordinator balance reads — completes
+   while `Keyring.spend_secret` is replaced with a throwing sentinel, so any direct
+   or indirect attempt to cross the spend-key boundary fails the test.
 
 Existing BIP-352 vectors, scanner tests, conformance, differential and fuzz gates
 remain authoritative for protocol behavior. This architecture change must not weaken
