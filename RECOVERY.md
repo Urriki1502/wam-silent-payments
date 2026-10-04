@@ -33,6 +33,24 @@ Invoice metadata/contacts cannot be reconstructed from the blockchain; only the
 most recent backup preserves them. No system can recover labels or invoice data
 created after the last backup merely from a seed without a recorded search bound.
 
+## Recovery Drill V2 qualification
+
+The recovery suite also performs a new-host disaster drill rather than only a
+same-profile roundtrip. It builds a wallet with multiple epochs, sparse labels,
+matched payments, merchant intent/outbox state, a private contact and a manual
+coin reservation. The active database is then closed and deleted.
+
+The authenticated recovery bundle is restored into a separate private directory,
+the chain is rescanned from the validating source, and the recovered wallet must
+match the original accounts, payments, history, balances, labels, contacts,
+reservations, merchant intents and undelivered outbox events. A remaining
+unreserved coin must still produce a valid signed spend with the restored Keyring.
+
+A second drill authenticates a deliberately malformed local-state payload and
+verifies that validation fails closed with `RECOVERY_STATE_INVALID` and removes
+the newly created partial database. Authentication alone never makes restored
+application state trustworthy.
+
 Legacy v0.2 key envelopes retain their exact `legacy-v2` HMAC hierarchy. New keys
 use BIP32 m/352'/1'/account'/role'/0 (spend role 0', scan role 1') for regtest. Never
 reinterpret old seeds as the new hierarchy. Legacy key-only backups cannot restore
