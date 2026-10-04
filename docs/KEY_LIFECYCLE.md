@@ -24,6 +24,23 @@ new destinations. Sparse labels need exact backup metadata, not a guessed range.
 | Database corrupt or suspect | Preserve encrypted backups; restore into a new DB and rescan a trusted node |
 | Wallet retirement | Stop invoice/address issuance, sweep intended funds with independently approved intent, retain historical scan/recovery records and never republish retired destinations |
 
+## Offline signing ceremony V2
+
+The standalone signer reviews the encrypted payment request before opening the
+seed-bearing Keyring. A rejected request therefore never unlocks spend authority.
+
+After request approval, the signer opens the Keyring only long enough to build the
+deterministic unsigned PSBT, then closes it before displaying the prepared
+transaction. The operator reviews output amounts and the SHA256 fingerprint of the
+exact PSBT bytes. Signing requires typing `SIGN <full fingerprint>`; any mismatch
+cancels without reopening the Keyring.
+
+Only after that exact-byte approval does the signer reopen the Keyring, recompute
+and verify the prepared transaction through `Signer.sign`, sign it, validate that
+the signed PSBT finalizes, and close the Keyring again. This deliberately trades a
+second passphrase entry for a shorter spend-key residency window and an approval
+bound to the artifact actually signed.
+
 After signing, close Keyring: its mutable seed buffer is overwritten and future
 key/backup requests fail. This is best-effort disposal. CPython integers/bytes,
 CFFI/native temporaries, garbage collector copies, swap and storage wear leveling

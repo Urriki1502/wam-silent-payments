@@ -3,6 +3,7 @@
 import os
 from pathlib import Path
 import pty
+import re
 import select
 import subprocess
 import sys
@@ -45,12 +46,8 @@ def sign_in_process(directory, ring, request, password):
         )
         os.close(slave)
         slave = -1
-        pending = [
-            (b"Key backup passphrase: ", password + b"\n"),
-            (b"Request passphrase: ", password + b"\n"),
-            (b"Type SIGN to approve exactly this payment: ", b"SIGN\n"),
-        ]
         captured = b""
+        step = 0
         deadline = time.monotonic() + 20
         while time.monotonic() < deadline:
             if select.select([master], [], [], 0.1)[0]:
@@ -63,13 +60,35 @@ def sign_in_process(directory, ring, request, password):
                 captured += chunk
                 if len(captured) > 65536:
                     raise ValueError("SIGNER_OUTPUT_LIMIT")
-                if pending and pending[0][0] in captured:
-                    _, response = pending.pop(0)
-                    os.write(master, response)
+
+                if step == 0 and b"Request passphrase: " in captured:
+                    os.write(master, password + b"\n")
                     captured = b""
+                    step = 1
+                elif step == 1 and b"Type REVIEW to continue to key unlock: " in captured:
+                    os.write(master, b"REVIEW\n")
+                    captured = b""
+                    step = 2
+                elif step == 2 and b"Key backup passphrase (prepare): " in captured:
+                    os.write(master, password + b"\n")
+                    captured = b""
+                    step = 3
+                elif step == 3:
+                    match = re.search(
+                        rb"Type SIGN ([0-9a-f]{64}) to approve this exact prepared transaction: ",
+                        captured,
+                    )
+                    if match:
+                        os.write(master, b"SIGN " + match.group(1) + b"\n")
+                        captured = b""
+                        step = 4
+                elif step == 4 and b"Key backup passphrase (sign): " in captured:
+                    os.write(master, password + b"\n")
+                    captured = b""
+                    step = 5
             if process.poll() is not None:
                 break
-        if process.wait(timeout=2) != 0 or pending or not out.exists():
+        if process.wait(timeout=2) != 0 or step != 5 or not out.exists():
             raise ValueError("OFFLINE_SIGNER_FAILED")
         psbt = PSBT.from_base64(out.read_text())
         psbt.finalize()
