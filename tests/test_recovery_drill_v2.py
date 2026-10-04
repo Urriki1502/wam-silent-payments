@@ -25,7 +25,9 @@ def private_directory(path):
 
 
 class RecoveryDrillV2(unittest.TestCase):
-    def test_new_machine_restore_recovers_multi_epoch_metadata_locks_and_spendability(self):
+    def test_new_machine_restore_recovers_multi_epoch_metadata_locks_and_spendability(
+        self,
+    ):
         ring = Keyring(bytes(range(32)))
         chain = Chain()
 
@@ -76,7 +78,13 @@ class RecoveryDrillV2(unittest.TestCase):
                             "SELECT * FROM " + table + " ORDER BY rowid"
                         )
                     ]
-                    for table in ("contacts", "reservations", "labels", "intents", "outbox")
+                    for table in (
+                        "contacts",
+                        "reservations",
+                        "labels",
+                        "intents",
+                        "outbox",
+                    )
                 },
             }
             self.assertEqual(expected["balance"]["reserved_atoms"], 100_000)
