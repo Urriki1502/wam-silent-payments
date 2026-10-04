@@ -144,9 +144,7 @@ class RecoveryDrillV2(unittest.TestCase):
             envelope = wallet.backup(ring, PASSWORD)
             document = json.loads(unseal(envelope, PASSWORD, b"recovery"))
             payload = document["payload"]
-            payload["local"]["reservations"].append(
-                ["00" * 32, 0, "synthetic", "invalid-state", 1]
-            )
+            payload["local"]["reservations"].append(["00" * 32, 0, "synthetic", "invalid-state", 1])
             document["checksum"] = hashlib.sha256(backup.canonical(payload)).hexdigest()
             malformed = seal(backup.canonical(document), PASSWORD, b"recovery")
 
