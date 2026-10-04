@@ -87,7 +87,14 @@ def _write_signed(path, signed):
         os.fsync(stream.fileno())
 
 
-def run(keys_path, request_path, output_path, getpass_fn=getpass.getpass, input_fn=input, print_fn=print):
+def run(
+    keys_path,
+    request_path,
+    output_path,
+    getpass_fn=getpass.getpass,
+    input_fn=input,
+    print_fn=print,
+):
     request = decode_request(
         load_private(request_path),
         _password(getpass_fn, "Request passphrase: "),
