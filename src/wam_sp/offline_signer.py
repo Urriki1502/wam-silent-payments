@@ -72,9 +72,7 @@ def _review_prepared(prepared, print_fn):
 
 def _write_signed(path, signed):
     target = Path(path)
-    if target.parent.is_symlink() or (
-        os.name == "posix" and target.parent.stat().st_mode & 0o077
-    ):
+    if target.parent.is_symlink() or (os.name == "posix" and target.parent.stat().st_mode & 0o077):
         raise ValueError("PRIVATE_DIRECTORY_REQUIRED")
     fd = os.open(
         target,
@@ -113,9 +111,7 @@ def run(
     fingerprint = _review_prepared(prepared, print_fn)
 
     expected = f"SIGN {fingerprint}"
-    response = input_fn(
-        f"Type {expected} to approve this exact prepared transaction: "
-    )
+    response = input_fn(f"Type {expected} to approve this exact prepared transaction: ")
     if not hmac.compare_digest(response, expected):
         print_fn("CANCELLED")
         return 1
