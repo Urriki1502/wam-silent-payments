@@ -37,6 +37,14 @@ Failed snapshots remain explicitly unknown. Confirmed balance is separate from
 unconfirmed change/incoming amounts and pending spent amounts; selection excludes
 mempool spends. `txindex=1` is needed when the node must resolve a missing prevout.
 
+## State-machine qualification
+
+A deterministic adversarial lifecycle test drives repeated block appends, shallow
+reorgs, rescans, process-style scanner restarts and changing mempool snapshots.
+After every transition, the live scanner is compared with a new clean database
+rescanned from the current chain. Confirmed coins, history, balances, tip state and
+mempool-derived balance fields must match the clean-rescan oracle exactly.
+
 A reorg beyond the configured undo limit returns REORG_LIMIT_RESCAN_REQUIRED.
 Stop applications from spending, retain the recovery bundle, invoke `scanner.rescan`,
 then sync from genesis. Birthdays suppress ownership work before each account's
