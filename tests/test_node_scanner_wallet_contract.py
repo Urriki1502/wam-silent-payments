@@ -1,4 +1,3 @@
-import copy
 from dataclasses import replace
 import json
 from pathlib import Path
@@ -114,9 +113,7 @@ class NodeScannerWalletContract(unittest.TestCase):
         self.opened.remove(scanner)
         (self.root / "wallet.db").unlink()
 
-        restored_ring, restored = backup.restore(
-            envelope, PASSWORD, self.root / "recovered.db"
-        )
+        restored_ring, restored = backup.restore(envelope, PASSWORD, self.root / "recovered.db")
         self.opened.append(restored)
         self.addCleanup(restored_ring.close)
 
@@ -251,11 +248,8 @@ class NodeScannerWalletContract(unittest.TestCase):
 
         names = set(keys(document))
         self.assertTrue({"identity", "scan_secret", "spend_public"} <= names)
-        self.assertTrue(
-            names.isdisjoint(
-                {"seed", "spend_secret", "private_key", "keyring", "derived_spend_key"}
-            )
-        )
+        forbidden = {"seed", "spend_secret", "private_key", "keyring", "derived_spend_key"}
+        self.assertTrue(names.isdisjoint(forbidden))
 
         imported = import_scan(envelope, PASSWORD)
         self.ring.close()
