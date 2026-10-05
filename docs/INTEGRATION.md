@@ -39,3 +39,7 @@ code; raw exception strings are refused.
 status and result, not just individual PASS fields. Missing or changed source-bound
 evidence fails. Contract-only results are explicitly distinct from full release
 qualification. CI contains no deploy, tag, external message or public webhook action.
+
+## Reviewed component boundary
+
+The exact SDK / Silent Wallet / WAM Core boundary review is recorded in [INTEGRATION_BOUNDARY_REVIEW.md](INTEGRATION_BOUNDARY_REVIEW.md). No SDK or Silent Wallet source change was required by that review. The confirmed scanner uses the local validating node as chain truth and requires verbosity-3 prevout data from an unpruned node; it does not require a WAM-specific Silent Payments index for correctness.
