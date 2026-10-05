@@ -62,6 +62,10 @@ class SilentWallet:
             self.scanner.sync_mempool(rpc)
         return metrics
 
+    def scanner_status(self):
+        """Typed readiness only; no keys, balances or matched-output metadata."""
+        return self.scanner.status()
+
     def get_balance(self, min_confirmations=1):
         return self.wallet.balance(min_confirmations)
 
