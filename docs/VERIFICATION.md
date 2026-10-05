@@ -6,8 +6,8 @@ results, not an external audit. Counts below are not additive coverage percentag
 
 | Suite | Actual result |
 | --- | --- |
-| Unit/adversarial/integration/migration tests | 150 PASS, 0 FAIL, 0 SKIP |
-| Official BIP-352 vectors | All 28 groups PASS, included in the 150 tests |
+| Unit/adversarial/integration/migration tests | 163 PASS, 0 FAIL, 0 SKIP |
+| Official BIP-352 vectors | All 28 groups PASS, included in the 163 tests |
 | Official BIP-375 field corpus | 20 valid + 23 invalid cases PASS; strict rejections separately asserted |
 | Official BIP-374 DLEQ | 11 generation + 17 verification rows PASS, inside two unit tests |
 | Independent BIP-352 differential | 10,000 PASS, 0 mismatch; deterministic seed 35220260930 |
@@ -25,8 +25,7 @@ results, not an external audit. Counts below are not additive coverage percentag
 ## Unit group coverage
 
 Adversarial 7; BIP375 43; boundaries 14; differential 2; durability 7; application
-integrations 8; keys/PSBT 10; PSBTv2 6; recovery 6; release gate 3; scanner/wallet 16;
-BIP352 vector groups 28. No statement of 100% line/branch coverage is made.
+integrations 8; keys/PSBT 10; PSBTv2 6; recovery 6; release gate 3; scanner/wallet 16; architecture/capability boundary 13; BIP352 vector groups 28. No statement of 100% line/branch coverage is made.
 
 ## Actual E2E and durability
 
