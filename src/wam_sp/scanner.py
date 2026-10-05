@@ -12,6 +12,7 @@ from .transaction import blob
 from .core import Input, Receiver, prepare
 from .limits import DEFAULT, check_inputs
 from .store import Store
+from .contracts import MatchedOutput, ScannerStatus
 
 
 @dataclass
@@ -104,6 +105,35 @@ class Scanner:
 
     def close(self):
         self.store.close()
+
+    def status(self):
+        """Return a typed readiness snapshot without exposing database internals."""
+        height, tip = self.store.tip()
+        current = self.ready and self.verified_tip == (height, tip)
+        return ScannerStatus(
+            height=height,
+            tip=tip,
+            ready=bool(current),
+            mempool_ready=bool(current and self.mempool_ready),
+            accounts=len(self.accounts),
+        )
+
+    def matched_outputs(self, limit=1000, offset=0):
+        """Return bounded sensitive match metadata for wallet coordination."""
+        self.assert_current()
+        if (
+            type(limit) is not int
+            or not 1 <= limit <= 1000
+            or type(offset) is not int
+            or not 0 <= offset <= 1_000_000
+        ):
+            raise ValueError("MATCHED_OUTPUT_PAGE")
+        rows = self.store.db.execute(
+            "SELECT txid,vout,account,epoch,atoms,public_key,tweak,label,k,received,spent "
+            "FROM coins ORDER BY received,txid,vout LIMIT ? OFFSET ?",
+            (limit, offset),
+        )
+        return tuple(MatchedOutput.from_mapping(r) for r in rows)
 
     @contextmanager
     def _lease(self):
