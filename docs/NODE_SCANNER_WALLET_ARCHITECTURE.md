@@ -7,6 +7,8 @@ moving Silent Payments logic into upstream `src/wallet/`.
 
 ## Security ownership
 
+The current implementation remains a **regtest-only qualification build**. `profile.py` keeps `MAINNET_ENABLED = False`, `core.py` uses the draft `wamrtsp` namespace, and `hd.py` defaults to test-chain coin type 1. Mainnet/testnet Silent Payments namespace and HD profile adoption are therefore maintainer decisions, not assumptions made by this document.
+
 The design has three trust domains:
 
 | Domain | Owns | Must not own |
