@@ -80,3 +80,7 @@ Read [THREAT_MODEL.md](THREAT_MODEL.md), [PSBT.md](PSBT.md), [SCANNER.md](SCANNE
 [WSP-1.md](WSP-1.md), [audit/README.md](audit/README.md) and
 [docs/VERIFICATION.md](docs/VERIFICATION.md). Public reports contain only synthetic
 fixtures, counts and fixed error codes. Never paste real key material into tests.
+
+## Architecture review branch
+
+The node/scanner/wallet capability contract is documented in [docs/NODE_SCANNER_WALLET_ARCHITECTURE.md](docs/NODE_SCANNER_WALLET_ARCHITECTURE.md). It keeps WAM Core as chain truth, the scanner as scan-only capability/state, and seed/spend authority in the wallet/signing domain. This does not change the regtest-only qualification status or enable mainnet Silent Payments.
