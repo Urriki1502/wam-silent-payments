@@ -25,3 +25,9 @@ scanner mutations across processes. SQLite BEGIN IMMEDIATE serializes wallet
 reservations and label identity compare-and-swap prevents lost reconfiguration.
 Readers of accounting/history use a transaction snapshot. Application code must
 not mutate `store.db` directly; it is not the public integration boundary.
+
+## Node / scanner / wallet capability boundary
+
+The review contract is in [docs/NODE_SCANNER_WALLET_ARCHITECTURE.md](docs/NODE_SCANNER_WALLET_ARCHITECTURE.md), with the cross-repository source review in [docs/INTEGRATION_BOUNDARY_REVIEW.md](docs/INTEGRATION_BOUNDARY_REVIEW.md). The scanner receives the existing scan capability, not the seed or spend secret. For the supported unpruned local-node profile, Bitcoin Core v28.1 `getblock(..., 3)` supplies the required confirmed prevout data, so **no Core change is required for correctness**.
+
+This remains a regtest-only qualification architecture. Mainnet/testnet Silent Payments profile adoption is outside this branch.
