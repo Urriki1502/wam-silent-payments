@@ -12,6 +12,25 @@ from wam_sp.keystore import save_private
 from wam_sp.psbt import PSBT
 
 
+def _spawn_signer(argv, slave, directory, env):
+    """Start the signer detached from any caller controlling terminal.
+
+    stdin/stdout/stderr still point at the dedicated PTY slave, so isatty()
+    remains true. A new session prevents getpass() from opening the parent's
+    /dev/tty on interactive macOS/Linux terminals and bypassing the harness.
+    """
+    return subprocess.Popen(
+        argv,
+        stdin=slave,
+        stdout=slave,
+        stderr=slave,
+        cwd=directory,
+        env=env,
+        close_fds=True,
+        start_new_session=True,
+    )
+
+
 def sign_in_process(directory, ring, request, password):
     directory = Path(directory)
     keys = directory / "offline-keys.enc"
@@ -24,7 +43,7 @@ def sign_in_process(directory, ring, request, password):
     env["PYTHONPATH"] = str(Path(wam_sp.__file__).resolve().parent.parent)
     process = None
     try:
-        process = subprocess.Popen(
+        process = _spawn_signer(
             [
                 sys.executable,
                 "-m",
@@ -36,12 +55,9 @@ def sign_in_process(directory, ring, request, password):
                 "--output",
                 str(out),
             ],
-            stdin=slave,
-            stdout=slave,
-            stderr=slave,
-            cwd=directory,
-            env=env,
-            close_fds=True,
+            slave,
+            directory,
+            env,
         )
         os.close(slave)
         slave = -1
