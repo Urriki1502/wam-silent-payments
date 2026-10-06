@@ -1,0 +1,73 @@
+{
+  "runtime": [
+    {
+      "name": "coincurve",
+      "version": "21.0.0",
+      "license": "MIT OR Apache-2.0",
+      "requires": [],
+      "project_urls": [
+        "Homepage, https://ofek.dev/coincurve/",
+        "Sponsor, https://github.com/sponsors/ofek",
+        "History, https://ofek.dev/coincurve/history/",
+        "Tracker, https://github.com/ofek/coincurve/issues",
+        "Source, https://github.com/ofek/coincurve"
+      ]
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.0",
+      "license": "Apache-2.0 OR BSD-3-Clause",
+      "requires": [
+        "cffi>=2.0.0 ; platform_python_implementation != 'PyPy'",
+        "typing-extensions>=4.13.2 ; python_full_version < '3.11'",
+        "bcrypt>=3.1.5 ; extra == 'ssh'"
+      ],
+      "project_urls": [
+        "changelog, https://cryptography.io/en/latest/changelog/",
+        "documentation, https://cryptography.io/",
+        "homepage, https://github.com/pyca/cryptography",
+        "issues, https://github.com/pyca/cryptography/issues",
+        "source, https://github.com/pyca/cryptography/"
+      ]
+    },
+    {
+      "name": "pycryptodome",
+      "version": "3.23.0",
+      "license": "BSD License / Public Domain",
+      "requires": [],
+      "project_urls": [
+        "Homepage, https://www.pycryptodome.org/",
+        "Source, https://github.com/Legrandin/pycryptodome",
+        "PyPI, https://pypi.org/project/pycryptodome/3.23.0/"
+      ]
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "license": "MIT-0",
+      "requires": [
+        "pycparser; implementation_name != \"PyPy\""
+      ],
+      "project_urls": [
+        "Documentation, https://cffi.readthedocs.io/",
+        "Changelog, https://cffi.readthedocs.io/en/latest/whatsnew.html",
+        "Download, https://github.com/python-cffi/cffi/releases",
+        "Contact, https://groups.google.com/forum/#!forum/python-cffi",
+        "Source Code, https://github.com/python-cffi/cffi",
+        "Issue Tracker, https://github.com/python-cffi/cffi/issues"
+      ]
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "license": "BSD-3-Clause",
+      "requires": [],
+      "project_urls": [
+        "Homepage, https://github.com/eliben/pycparser"
+      ]
+    }
+  ],
+  "python": ">=3.11; verified CPython 3.12/Linux x86_64",
+  "crypto_backend": "coincurve bundled libsecp256k1; cryptography bundled OpenSSL; PyCryptodome RIPEMD160 for HASH160 portability",
+  "update_policy": "pin reviewed releases; pip-audit each qualification; rerun vectors, differential, fuzz, restore and real-node suites after crypto upgrades"
+}

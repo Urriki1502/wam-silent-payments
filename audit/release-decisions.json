@@ -1,0 +1,6 @@
+{
+  "wam_profile_adoption": "pending",
+  "independent_security_review": "pending",
+  "external_audit_status": "pending",
+  "reason": "WAM maintainers must approve the production SP namespace/HD network profile. Independent review of protocol, recovery, PSBT and Python key custody has not been performed. Internal test evidence cannot supply either approval."
+}

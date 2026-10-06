@@ -1,0 +1,18 @@
+{
+  "suite": "wsp-scanner-benchmark",
+  "blocks": 1000,
+  "transactions": 1000,
+  "scan_seconds": 0.8288091520003036,
+  "blocks_per_second": 1206.550383265596,
+  "transactions_per_second": 1206.550383265596,
+  "database_bytes": 1208320,
+  "bytes_per_detected_output": 1208.32,
+  "max_rss_kib": 66308,
+  "restart_seconds": 0.059632997999869986,
+  "restart_blocks_rescanned": 0,
+  "reorg_depth": 300,
+  "reorg_seconds": 0.19727309899963075,
+  "recovery_seconds": 0.9335435469997719,
+  "scope": "synthetic local chain, SQLite synchronous FULL; includes RPC adapter calls but no network latency",
+  "result": "PASS"
+}
