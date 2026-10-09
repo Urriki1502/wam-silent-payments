@@ -9,6 +9,7 @@ from contextlib import contextmanager
 import os
 import fcntl
 from .transaction import blob
+from .block_source import BlockSource
 from .core import Input, Receiver, prepare
 from .limits import DEFAULT, check_inputs
 from .store import Store
@@ -84,6 +85,8 @@ def transaction_inputs(tx):
 
 
 class Scanner:
+    """BIP-352 scan/index role. Consumes BlockSource capability and no spend secret."""
+
     def __init__(self, path, accounts, limits=DEFAULT, logger=None):
         if not 1 <= len(accounts) <= limits.max_accounts or len(
             {a.account_id for a in accounts}
@@ -122,7 +125,7 @@ class Scanner:
         finally:
             os.close(fd)
 
-    def sync(self, rpc, max_blocks=None, cancel=None):
+    def sync(self, rpc: BlockSource, max_blocks=None, cancel=None):
         try:
             with self._lease():
                 result = self._sync(rpc, max_blocks, cancel)
@@ -141,7 +144,7 @@ class Scanner:
                 self.logger.emit("reorg_detected", rollback=result.rollback)
         return result
 
-    def _sync(self, rpc, max_blocks=None, cancel=None):
+    def _sync(self, rpc: BlockSource, max_blocks=None, cancel=None):
         self.ready = False
         self.mempool_ready = False
         self.metrics = Metrics()
@@ -358,7 +361,7 @@ class Scanner:
             self.ready = False
             raise ValueError("SCAN_NOT_CURRENT")
 
-    def sync_mempool(self, rpc):
+    def sync_mempool(self, rpc: BlockSource):
         with self._lease():
             self.assert_current()
             self.mempool_ready = False
