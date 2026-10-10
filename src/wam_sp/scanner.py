@@ -6,9 +6,8 @@ from hashlib import sha256
 import json
 import re
 from contextlib import contextmanager
-import os
-import fcntl
 from .transaction import blob
+from .file_lock import exclusive_file_lock
 from .core import Input, Receiver, prepare
 from .limits import DEFAULT, check_inputs
 from .store import Store
@@ -107,20 +106,9 @@ class Scanner:
 
     @contextmanager
     def _lease(self):
-        fd = os.open(
-            str(self.store.path) + ".scan.lock",
-            os.O_CREAT | os.O_RDWR | getattr(os, "O_NOFOLLOW", 0),
-            0o600,
-        )
-        try:
-            try:
-                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            except BlockingIOError:
-                raise ValueError("SCANNER_BUSY") from None
+        with exclusive_file_lock(str(self.store.path) + ".scan.lock"):
             with self.store.lock:
                 yield
-        finally:
-            os.close(fd)
 
     def sync(self, rpc, max_blocks=None, cancel=None):
         try:
