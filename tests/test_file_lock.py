@@ -3,6 +3,7 @@
 Import the dependency-free lock module by file path, allowing x86 verification
 without assuming third-party cryptographic extension wheels are available.
 """
+
 import importlib.util
 import os
 from pathlib import Path
