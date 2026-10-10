@@ -111,14 +111,18 @@ class ScannerFileLockTests(unittest.TestCase):
                 self.fail("followed an untrusted symlink")
         self.assertEqual(target.read_text(encoding="ascii"), "target")
 
-    @unittest.skipUnless(os.name == "nt", "Only Windows uses native OVERLAPPED")
-    def test_windows_structure_abi_matches_python_architecture(self):
-        import ctypes
+    # WSP-1's strict selftest treats even platform-inapplicable SKIPs as
+    # failures. Register the ABI test ONLY under native Windows, on both x86
+    # and x64 CI runners; do not report a Linux/macOS SKIP or a fake PASS.
+    if os.name == "nt":
 
-        pointer_size = ctypes.sizeof(ctypes.c_void_p)
-        self.assertEqual(ctypes.sizeof(lock._Overlapped), 20 if pointer_size == 4 else 32)
-        self.assertEqual(lock._Overlapped.Offset.offset, 8 if pointer_size == 4 else 16)
-        self.assertEqual(lock._Overlapped.hEvent.offset, 16 if pointer_size == 4 else 24)
+        def test_windows_structure_abi_matches_python_architecture(self):
+            import ctypes
+
+            pointer_size = ctypes.sizeof(ctypes.c_void_p)
+            self.assertEqual(ctypes.sizeof(lock._Overlapped), 20 if pointer_size == 4 else 32)
+            self.assertEqual(lock._Overlapped.Offset.offset, 8 if pointer_size == 4 else 16)
+            self.assertEqual(lock._Overlapped.hEvent.offset, 16 if pointer_size == 4 else 24)
 
 
 if __name__ == "__main__":
