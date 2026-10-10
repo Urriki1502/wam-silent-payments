@@ -1,0 +1,89 @@
+name: Scanner Lock Windows x86/x64 Qualification
+
+on:
+  pull_request:
+  push:
+    branches: [fix/windows-x86-x64-scanner-lock]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native-file-lock:
+    name: Native lock / ${{ matrix.os }} / ${{ matrix.arch }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: windows-latest, arch: x86}
+          - {os: windows-latest, arch: x64}
+          - {os: macos-latest, arch: x64}
+          - {os: ubuntu-latest, arch: x64}
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: ${{ matrix.arch }}
+      - name: Confirm native Python pointer size
+        shell: python
+        run: |
+          import struct
+          import sys
+          actual = struct.calcsize("P") * 8
+          import os
+          expected = 32 if os.environ["PYTHON_TARGET_ARCH"] == "x86" else 64
+          assert actual == expected, (actual, expected)
+        # Avoid relying on runner defaults; pass architecture via env instead.
+        env:
+          PYTHON_TARGET_ARCH: ${{ matrix.arch }}
+      - name: Run independent cross-process lock regression
+        run: python -m unittest discover -s tests -p test_file_lock.py -v
+
+  scanner-regression:
+    name: Scanner & wallet regression / ${{ matrix.os }} / x64
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Install WSP-1 engine and pinned dependencies
+        run: python -m pip install .
+      - name: Check package dependency health
+        run: python -m pip check
+      - name: Scanner and wallet tests
+        run: python -m unittest discover -s tests -p test_scanner_wallet.py -v
+      - name: Integration regression
+        run: python -m unittest discover -s tests -p test_integrations_v1.py -v
+
+  formatting:
+    name: New-code syntax and formatting
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install ruff==0.15.6
+      - run: python -m compileall -q src/wam_sp/file_lock.py src/wam_sp/scanner.py tests/test_file_lock.py tests/helpers/hold_scanner_lock.py
+      - run: python -m ruff check src/wam_sp/file_lock.py tests/test_file_lock.py tests/helpers/hold_scanner_lock.py
+      - run: python -m ruff format --check src/wam_sp/file_lock.py tests/test_file_lock.py tests/helpers/hold_scanner_lock.py
